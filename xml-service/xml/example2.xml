@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prox="http://proxy3.services.service4iin.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prox:action>
+         <params><![CDATA[<?xml version="1.0" encoding="UTF-8"?><root><body method="ENSI_SeGetDataGetItems" operation="vshep"><![CDATA[<data><Request xmlns="http://nitec.kz/unidic/ws/getdata"><Login>pcb</Login><Password>c0-UmUbVK9</Password><EntityName>KatoRdi</EntityName><Filter>IsMarkedToDelete = &#39;false&#39;</Filter></Request></data>]]]]>><![CDATA[</body></root>]]></params>
+         <withoutRoot>true</withoutRoot>
+         <isTransportSign>true</isTransportSign>
+         <isAsync>false</isAsync>
+      </prox:action>
+   </soapenv:Body>
+</soapenv:Envelope>

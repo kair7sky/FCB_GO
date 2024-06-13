@@ -1,0 +1,31 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:actionResponse xmlns:ns2="http://proxy3.services.service4iin.com/">
+         <return><![CDATA[<com.fcb.vshep.services.main.ServiceReturn>
+  <returnMessage class="com.fcb.vshep.services.vshep.sync.SyncSendMessageResponse">
+    <responseInfo>
+      <messageId>2d652f2b-1119-42de-a0ed-12640654c710</messageId>
+      <responseDate class="com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl">
+        <year>2024</year>
+        <month>6</month>
+        <day>6</day>
+        <timezone>-2147483648</timezone>
+        <hour>5</hour>
+        <minute>50</minute>
+        <second>5</second>
+      </responseDate>
+      <status>
+        <code>SCSS001</code>
+        <message>Message has been processed successfully</message>
+      </status>
+      <sessionId>{4adf7da2-e2b2-45f5-b264-7882e415aa08}</sessionId>
+    </responseInfo>
+    <responseData>
+      <data class="string">&lt;data xmlns:tns=&quot;http://bip.bee.kz/SyncChannel/v10/Types&quot;&gt;&lt;isExists&gt;false&lt;/isExists&gt;&lt;/data&gt;</data>
+    </responseData>
+  </returnMessage>
+  <errorCode>0</errorCode>
+</com.fcb.vshep.services.main.ServiceReturn>]]></return>
+      </ns2:actionResponse>
+   </S:Body>
+</S:Envelope>

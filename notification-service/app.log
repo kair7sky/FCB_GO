@@ -1,0 +1,95 @@
+2024/06/11 18:07:18 Application started
+2024/06/11 18:07:18 Loaded .env file successfully
+2024/06/11 18:07:18 goose: no migrations to run. current version: 20230611
+2024/06/11 18:07:18 Database migrations applied successfully
+2024/06/11 18:07:18 Database migrated
+2024/06/11 18:07:18 Failed to connect to RabbitMQ: dial tcp [::1]:5672: connectex: No connection could be made because the target machine actively refused it.
+2024/06/11 18:15:43 Application started
+2024/06/11 18:15:44 Loaded .env file successfully
+2024/06/11 18:15:44 goose: no migrations to run. current version: 20230611
+2024/06/11 18:15:44 Database migrations applied successfully
+2024/06/11 18:15:44 Database migrated
+2024/06/11 18:15:44 Failed to connect to RabbitMQ: dial tcp [::1]:5672: connectex: No connection could be made because the target machine actively refused it.
+2024/06/12 10:46:53 Application started
+2024/06/12 10:46:53 Loaded .env file successfully
+2024/06/12 10:46:53 goose: no migrations to run. current version: 20230611
+2024/06/12 10:46:53 Database migrations applied successfully
+2024/06/12 10:46:53 Database migrated
+2024/06/12 10:46:53 Failed to connect to RabbitMQ: dial tcp [::1]:5672: connectex: No connection could be made because the target machine actively refused it.
+2024/06/12 11:13:40 Application started
+2024/06/12 11:13:41 Loaded .env file successfully
+2024/06/12 11:13:41 goose: no migrations to run. current version: 20230611
+2024/06/12 11:13:41 Database migrations applied successfully
+2024/06/12 11:13:41 Database migrated
+2024/06/12 11:13:41 Connected to RabbitMQ
+2024/06/12 11:13:41 RabbitMQ channel opened
+2024/06/12 11:13:41  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/12 11:13:41 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"This is a test notification."}
+2024/06/12 11:13:42 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
+5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-52c83c7f3c9sm1543257e87.175 - gsmtp
+2024/06/12 11:49:05 Application started
+2024/06/12 11:49:05 Loaded .env file successfully
+2024/06/12 11:49:05 goose: no migrations to run. current version: 20230611
+2024/06/12 11:49:05 Database migrations applied successfully
+2024/06/12 11:49:05 Database migrated
+2024/06/12 11:49:05 Connected to RabbitMQ
+2024/06/12 11:49:05 RabbitMQ channel opened
+2024/06/12 11:49:05  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/12 11:49:05 Received a notification: {"messageTo":"cherepaxa12asas@gmail.com","content":"This is a test notification."}
+2024/06/12 11:49:06 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
+5.7.8  https://support.google.com/mail/?p=BadCredentials 38308e7fff4ca-2ebe3047174sm14801971fa.140 - gsmtp
+2024/06/12 11:49:06 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"test"}
+2024/06/12 11:49:07 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
+5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-52c8b5970f9sm1169675e87.173 - gsmtp
+2024/06/12 11:49:07 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"test"}
+2024/06/12 11:49:07 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
+5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-52c7f319639sm1715067e87.296 - gsmtp
+2024/06/12 12:01:25 Application started
+2024/06/12 12:01:25 Loaded .env file successfully
+2024/06/12 12:01:25 goose: no migrations to run. current version: 20230611
+2024/06/12 12:01:25 Database migrations applied successfully
+2024/06/12 12:01:25 Database migrated
+2024/06/12 12:01:25 Connected to RabbitMQ
+2024/06/12 12:01:25 RabbitMQ channel opened
+2024/06/12 12:01:25  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/12 12:32:37 Application started
+2024/06/12 12:32:37 Loaded .env file successfully
+2024/06/12 12:32:37 goose: no migrations to run. current version: 20230611
+2024/06/12 12:32:37 Database migrations applied successfully
+2024/06/12 12:32:38 Database migrated
+2024/06/12 12:32:38 Connected to RabbitMQ
+2024/06/12 12:32:38 RabbitMQ channel opened
+2024/06/12 12:32:38  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/12 12:42:52 Application started
+2024/06/12 12:42:52 Loaded .env file successfully
+2024/06/12 12:42:52 goose: no migrations to run. current version: 20230611
+2024/06/12 12:42:52 Database migrations applied successfully
+2024/06/12 12:42:53 Database migrated
+2024/06/12 12:42:53 Connected to RabbitMQ
+2024/06/12 12:42:53 RabbitMQ channel opened
+2024/06/12 12:42:53  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/12 12:42:53 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"test"}
+2024/06/12 12:42:54 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
+5.7.8  https://support.google.com/mail/?p=BadCredentials 38308e7fff4ca-2eb362e464fsm19081201fa.57 - gsmtp
+2024/06/12 14:05:47 Application started
+2024/06/12 14:05:47 Loaded .env file successfully
+2024/06/12 14:05:47 goose: no migrations to run. current version: 20230611
+2024/06/12 14:05:47 Database migrations applied successfully
+2024/06/12 14:05:47 Database migrated
+2024/06/12 14:05:47 Connected to RabbitMQ
+2024/06/12 14:05:47 RabbitMQ channel opened
+2024/06/12 14:05:47  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/12 14:06:38 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"test"}
+2024/06/12 14:06:38 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
+5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-52c9509716esm474441e87.198 - gsmtp
+2024/06/12 15:03:41 Application started
+2024/06/12 15:03:41 Loaded .env file successfully
+2024/06/12 15:03:41 goose: no migrations to run. current version: 20230611
+2024/06/12 15:03:41 Database migrations applied successfully
+2024/06/12 15:03:41 Database migrated
+2024/06/12 15:03:41 Connected to RabbitMQ
+2024/06/12 15:03:41 RabbitMQ channel opened
+2024/06/12 15:03:41  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/12 15:04:03 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"test"}
+2024/06/12 15:04:05 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
+5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-52c83b1b56dsm1617194e87.142 - gsmtp
