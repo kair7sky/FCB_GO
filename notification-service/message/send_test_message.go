@@ -39,7 +39,7 @@ func main() {
 
     notification := Notification{
         MessageTo: "kairkhanovabylai@gmail.com",
-        Content:   "test",
+        Content:   "Отчет по проверке xml",
     }
     body, err := json.Marshal(notification)
     if err != nil {

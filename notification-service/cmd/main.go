@@ -130,8 +130,8 @@ func main() {
 	<-forever
 
 	// HTTP
-	log.Println("Сервер запущен на :8080")
-	http.ListenAndServe(":8080", nil)
+	log.Println("Сервер запущен на :8081")
+	http.ListenAndServe(":8081", nil)
 }
 
 func initDB(dsn string) *gorm.DB {

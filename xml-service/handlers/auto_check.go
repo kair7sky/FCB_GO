@@ -2,18 +2,25 @@ package handlers
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
+	"strings"
+
+	// "xml-service/db"
+	"xml-service/email"
+	"xml-service/soap"
 	"xml-service/utils"
-	"xml-service/xml"
 )
 
 // RequestPayload represents the payload for the auto check request
 type RequestPayload struct {
-	FilePath string `json:"file_path"`
+	URL      string   `json:"url"`
+	Requests []string `json:"requests"`
+	Email    string   `json:"email"`
 }
 
-// AutoCheckHandler handles automatic checking of XML files
+// AutoCheckHandler handles automatic checking of SOAP requests
 func AutoCheckHandler(w http.ResponseWriter, r *http.Request) {
 	var request RequestPayload
 
@@ -25,26 +32,35 @@ func AutoCheckHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Parse the XML file
-	xmlData, err := xml.ParseXMLFile(request.FilePath)
+	// Check the SOAP requests
+	results, err := soap.CheckSOAPRequests(request.URL, request.Requests)
 	if err != nil {
-		log.Printf("Error parsing XML file: %v", err)
-		utils.RespondWithError(w, http.StatusInternalServerError, "Failed to parse XML file")
+		log.Printf("Error checking SOAP requests: %v", err)
+		utils.RespondWithError(w, http.StatusInternalServerError, "Failed to check SOAP requests")
 		return
 	}
 
-	// Check the XML queries
-	errors, err := xml.CheckXMLQueries(xmlData)
+	// // Store the auto check results in the database
+	// for _, result := range results {
+	// 	db.DB.Create(&result)
+	// }
+
+	// Format the results for email
+	var emailBody strings.Builder
+	emailBody.WriteString("Auto Check Results:\n\n")
+	for _, result := range results {
+		emailBody.WriteString(fmt.Sprintf("URL: %s\nStatus: %s\nResult: %s\nCreatedAt: %s\n\n",
+			result.URL, result.Status, result.Result, result.CreatedAt))
+	}
+
+	// Send the results via email
+	err = email.SendEmail(request.Email, "Auto Check Results", emailBody.String())
 	if err != nil {
-		log.Printf("Error checking XML queries: %v", err)
-		utils.RespondWithError(w, http.StatusInternalServerError, "Error checking XML queries")
+		log.Printf("Error sending email: %v", err)
+		utils.RespondWithError(w, http.StatusInternalServerError, "Failed to send email")
 		return
 	}
 
 	// Respond with the results
-	if len(errors) > 0 {
-		utils.RespondWithJSON(w, http.StatusOK, map[string]interface{}{"errors": errors})
-	} else {
-		utils.RespondWithJSON(w, http.StatusOK, map[string]interface{}{"message": "All queries are valid"})
-	}
+	utils.RespondWithJSON(w, http.StatusOK, map[string]interface{}{"results": results})
 }

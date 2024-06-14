@@ -8,7 +8,7 @@ require (
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
 	github.com/pressly/goose/v3 v3.20.0
 	github.com/streadway/amqp v1.1.0
-	gorm.io/driver/postgres v1.5.7
+	gorm.io/driver/postgres v1.5.9
 	gorm.io/gorm v1.25.10
 )
 

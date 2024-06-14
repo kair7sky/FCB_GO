@@ -93,3 +93,49 @@
 2024/06/12 15:04:03 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"test"}
 2024/06/12 15:04:05 Error sending email: 535 5.7.8 Username and Password not accepted. For more information, go to
 5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-52c83b1b56dsm1617194e87.142 - gsmtp
+2024/06/13 16:16:02 Application started
+2024/06/13 16:16:02 Loaded .env file successfully
+2024/06/13 16:16:02 goose: no migrations to run. current version: 20230613
+2024/06/13 16:16:02 Database migrations applied successfully
+2024/06/13 16:16:03 Database migrated
+2024/06/13 16:16:03 Connected to RabbitMQ
+2024/06/13 16:16:03 RabbitMQ channel opened
+2024/06/13 16:16:03  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/13 16:17:50 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"test"}
+2024/06/13 16:21:20 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"Отчет по проверке xml"}
+2024/06/13 17:14:58 Application started
+2024/06/13 17:14:58 Loaded .env file successfully
+2024/06/13 17:14:58 goose: no migrations to run. current version: 20230613
+2024/06/13 17:14:58 Database migrations applied successfully
+2024/06/13 17:14:59 Database migrated
+2024/06/13 17:14:59 Connected to RabbitMQ
+2024/06/13 17:14:59 RabbitMQ channel opened
+2024/06/13 17:14:59  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/13 17:14:59 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"Отчет по проверке xml"}
+2024/06/13 17:18:30 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"Отчет по проверке xml"}
+2024/06/13 17:18:57 Application started
+2024/06/13 17:18:57 Loaded .env file successfully
+2024/06/13 17:18:57 goose: no migrations to run. current version: 20230613
+2024/06/13 17:18:57 Database migrations applied successfully
+2024/06/13 17:18:57 Database migrated
+2024/06/13 17:18:57 Connected to RabbitMQ
+2024/06/13 17:18:57 RabbitMQ channel opened
+2024/06/13 17:18:57  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/14 12:46:50 Application started
+2024/06/14 12:46:50 Loaded .env file successfully
+2024/06/14 12:46:50 goose: no migrations to run. current version: 20230613
+2024/06/14 12:46:50 Database migrations applied successfully
+2024/06/14 12:46:50 Database migrated
+2024/06/14 12:46:50 Connected to RabbitMQ
+2024/06/14 12:46:50 RabbitMQ channel opened
+2024/06/14 12:46:50  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/14 12:47:43 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"Отчет по проверке xml"}
+2024/06/14 15:26:50 Application started
+2024/06/14 15:26:50 Loaded .env file successfully
+2024/06/14 15:26:50 goose: no migrations to run. current version: 20230613
+2024/06/14 15:26:50 Database migrations applied successfully
+2024/06/14 15:26:50 Database migrated
+2024/06/14 15:26:50 Connected to RabbitMQ
+2024/06/14 15:26:50 RabbitMQ channel opened
+2024/06/14 15:26:51  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/14 15:27:29 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"Отчет по проверке xml"}
