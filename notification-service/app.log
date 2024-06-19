@@ -248,3 +248,11 @@
 2024/06/17 18:06:09 Connected to RabbitMQ
 2024/06/17 18:06:09 RabbitMQ channel opened
 2024/06/17 18:06:09 Notification service starting at :8081
+2024/06/19 11:01:56 Application started
+2024/06/19 11:01:56 Loaded .env file successfully
+2024/06/19 11:01:56 goose: no migrations to run. current version: 20230613
+2024/06/19 11:01:56 Database migrations applied successfully
+2024/06/19 11:01:56 Database migrated
+2024/06/19 11:01:57 Connected to RabbitMQ
+2024/06/19 11:01:57 RabbitMQ channel opened
+2024/06/19 11:01:57 Notification service starting at :8081

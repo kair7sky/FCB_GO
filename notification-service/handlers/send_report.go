@@ -60,7 +60,7 @@ func sendEmail(to, content string) error {
 	e.From = from
 	e.To = []string{to}
 	e.Subject = "Auto Check Report"
-	e.Text = []byte(content)
+	e.HTML = []byte(content)
 
 	smtpHost := os.Getenv("SMTP_HOST")
 	smtpPort := os.Getenv("SMTP_PORT")
