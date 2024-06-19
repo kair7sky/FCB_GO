@@ -16,6 +16,7 @@ import (
 
 	"notification-service/config"
 	emailPkg "notification-service/email" // Renaming the import to avoid conflict
+	"notification-service/handlers"
 )
 
 var db *gorm.DB
@@ -47,6 +48,9 @@ func main() {
 	cfg := config.LoadConfig()
 
 	db = initDB(cfg.DSN)
+
+	// Initialize handlers with the database connection
+	handlers.InitHandler(db)
 
 	// Loading .env file
 	err = godotenv.Load()
@@ -102,8 +106,6 @@ func main() {
 	)
 	failOnError(err, "Failed to register a consumer")
 
-	forever := make(chan bool)
-
 	go func() {
 		for d := range msgs {
 			log.Printf("Received a notification: %s", d.Body)
@@ -126,12 +128,10 @@ func main() {
 		}
 	}()
 
-	log.Printf(" [*] Waiting for notifications. To exit press CTRL+C")
-	<-forever
-
 	// HTTP
-	log.Println("Сервер запущен на :8081")
-	http.ListenAndServe(":8081", nil)
+	http.HandleFunc("/send-report", handlers.SendReportHandler)
+	log.Println("Notification service starting at :8081")
+	log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func initDB(dsn string) *gorm.DB {

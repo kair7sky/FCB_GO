@@ -6,35 +6,29 @@ import (
     "fmt"
     "io/ioutil"
     "net/http"
-    "xml-service/models"
 )
 
+// SOAPEnvelope and SOAPBody are structs for parsing SOAP responses
 type SOAPEnvelope struct {
-    XMLName xml.Name `xml:"soapenv:Envelope"`
-    SOAPEnv string   `xml:"xmlns:soapenv,attr"`
-    Body    SOAPBody
+    XMLName xml.Name `xml:"Envelope"`
+    Body    SOAPBody `xml:"Body"`
 }
 
 type SOAPBody struct {
-    XMLName xml.Name `xml:"soapenv:Body"`
+    XMLName xml.Name `xml:"Body"`
     Content string   `xml:",innerxml"`
+}
+
+// CheckResult represents the result of a SOAP request check
+type CheckResult struct {
+    URL    string `json:"url"`
+    Status string `json:"status"`
+    Result string `json:"result"`
 }
 
 // SendSOAPRequest sends a SOAP request and returns the response
 func SendSOAPRequest(url string, xmlData string) (string, error) {
-    soapEnvelope := SOAPEnvelope{
-        SOAPEnv: "http://schemas.xmlsoap.org/soap/envelope/",
-        Body: SOAPBody{
-            Content: xmlData,
-        },
-    }
-
-    soapBytes, err := xml.MarshalIndent(soapEnvelope, "", "  ")
-    if err != nil {
-        return "", fmt.Errorf("failed to marshal SOAP request: %w", err)
-    }
-
-    req, err := http.NewRequest("POST", url, bytes.NewBuffer(soapBytes))
+    req, err := http.NewRequest("POST", url, bytes.NewBufferString(xmlData))
     if err != nil {
         return "", fmt.Errorf("failed to create HTTP request: %w", err)
     }
@@ -56,8 +50,8 @@ func SendSOAPRequest(url string, xmlData string) (string, error) {
 }
 
 // CheckSOAPRequests sends SOAP requests and checks the responses
-func CheckSOAPRequests(url string, requests []string) ([]models.AutoCheck, error) {
-    var results []models.AutoCheck
+func CheckSOAPRequests(url string, requests []string) ([]CheckResult, error) {
+    var results []CheckResult
 
     for _, request := range requests {
         response, err := SendSOAPRequest(url, request)
@@ -68,13 +62,13 @@ func CheckSOAPRequests(url string, requests []string) ([]models.AutoCheck, error
             result = err.Error()
         }
 
-        autoCheck := models.AutoCheck{
+        checkResult := CheckResult{
             URL:    url,
             Status: status,
             Result: result,
         }
 
-        results = append(results, autoCheck)
+        results = append(results, checkResult)
     }
 
     return results, nil

@@ -139,3 +139,112 @@
 2024/06/14 15:26:50 RabbitMQ channel opened
 2024/06/14 15:26:51  [*] Waiting for notifications. To exit press CTRL+C
 2024/06/14 15:27:29 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"Отчет по проверке xml"}
+2024/06/14 16:15:47 Application started
+2024/06/14 16:15:47 Loaded .env file successfully
+2024/06/14 16:15:47 goose: no migrations to run. current version: 20230613
+2024/06/14 16:15:47 Database migrations applied successfully
+2024/06/14 16:15:48 Database migrated
+2024/06/14 16:15:48 Connected to RabbitMQ
+2024/06/14 16:15:48 RabbitMQ channel opened
+2024/06/14 16:15:48  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/17 09:53:11 Application started
+2024/06/17 09:53:12 Loaded .env file successfully
+2024/06/17 09:53:12 goose: no migrations to run. current version: 20230613
+2024/06/17 09:53:12 Database migrations applied successfully
+2024/06/17 09:53:12 Database migrated
+2024/06/17 09:53:12 Connected to RabbitMQ
+2024/06/17 09:53:12 RabbitMQ channel opened
+2024/06/17 09:53:12  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/17 15:42:33 Application started
+2024/06/17 15:42:33 Loaded .env file successfully
+2024/06/17 15:42:33 goose: no migrations to run. current version: 20230613
+2024/06/17 15:42:33 Database migrations applied successfully
+2024/06/17 15:42:33 Database migrated
+2024/06/17 15:42:33 Connected to RabbitMQ
+2024/06/17 15:42:33 RabbitMQ channel opened
+2024/06/17 15:42:33  [*] Waiting for notifications. To exit press CTRL+C
+2024/06/17 15:49:29 Received a notification: {"messageTo":"kairkhanovabylai@gmail.com","content":"Отчет по проверке xml"}
+2024/06/17 16:02:08 Application started
+2024/06/17 16:02:08 Loaded .env file successfully
+2024/06/17 16:02:08 goose: no migrations to run. current version: 20230613
+2024/06/17 16:02:08 Database migrations applied successfully
+2024/06/17 16:02:08 Database migrated
+2024/06/17 16:02:08 Connected to RabbitMQ
+2024/06/17 16:02:08 RabbitMQ channel opened
+2024/06/17 16:02:08 Notification service starting at :8081
+2024/06/17 16:02:51 Error sending email: mail: no address
+2024/06/17 16:05:48 Error sending email: mail: no address
+2024/06/17 16:05:56 Error sending email: mail: no address
+2024/06/17 16:10:03 Application started
+2024/06/17 16:10:03 Loaded .env file successfully
+2024/06/17 16:10:03 goose: no migrations to run. current version: 20230613
+2024/06/17 16:10:03 Database migrations applied successfully
+2024/06/17 16:10:03 Database migrated
+2024/06/17 16:10:03 Connected to RabbitMQ
+2024/06/17 16:10:03 RabbitMQ channel opened
+2024/06/17 16:10:03 Notification service starting at :8081
+2024/06/17 16:10:22 Error sending email: dial tcp :0: connectex: The requested address is not valid in its context.
+2024/06/17 16:11:12 Error sending email: mail: no address
+2024/06/17 16:11:47 Error sending email: mail: no address
+2024/06/17 16:17:36 Error sending email: mail: no address
+2024/06/17 16:22:34 Error sending email: dial tcp :0: connectex: The requested address is not valid in its context.
+2024/06/17 16:25:20 Application started
+2024/06/17 16:25:20 Loaded .env file successfully
+2024/06/17 16:25:20 goose: no migrations to run. current version: 20230613
+2024/06/17 16:25:20 Database migrations applied successfully
+2024/06/17 16:25:21 Database migrated
+2024/06/17 16:25:21 Connected to RabbitMQ
+2024/06/17 16:25:21 RabbitMQ channel opened
+2024/06/17 16:25:21 Notification service starting at :8081
+2024/06/17 16:25:42 Error sending email: SMTP configuration is not set properly
+2024/06/17 16:27:44 Error sending email: SMTP configuration is not set properly
+2024/06/17 16:31:35 Application started
+2024/06/17 16:31:35 Loaded .env file successfully
+2024/06/17 16:31:35 goose: no migrations to run. current version: 20230613
+2024/06/17 16:31:35 Database migrations applied successfully
+2024/06/17 16:31:36 Database migrated
+2024/06/17 16:31:36 Connected to RabbitMQ
+2024/06/17 16:31:36 RabbitMQ channel opened
+2024/06/17 16:31:36 Notification service starting at :8081
+2024/06/17 16:32:11 Error sending email: SMTP configuration is not set properly
+2024/06/17 16:32:15 Error sending email: SMTP configuration is not set properly
+2024/06/17 16:51:25 Application started
+2024/06/17 16:51:26 Loaded .env file successfully
+2024/06/17 16:51:26 goose: no migrations to run. current version: 20230613
+2024/06/17 16:51:26 Database migrations applied successfully
+2024/06/17 16:51:26 Database migrated
+2024/06/17 16:51:26 Connected to RabbitMQ
+2024/06/17 16:51:26 RabbitMQ channel opened
+2024/06/17 16:51:26 Notification service starting at :8081
+2024/06/17 16:53:47 Error sending email: SMTP configuration is not set properly
+2024/06/17 16:53:51 Error sending email: SMTP configuration is not set properly
+2024/06/17 16:56:16 Application started
+2024/06/17 16:56:16 Loaded .env file successfully
+2024/06/17 16:56:16 goose: no migrations to run. current version: 20230613
+2024/06/17 16:56:16 Database migrations applied successfully
+2024/06/17 16:56:16 Database migrated
+2024/06/17 16:56:16 Connected to RabbitMQ
+2024/06/17 16:56:16 RabbitMQ channel opened
+2024/06/17 16:56:16 Notification service starting at :8081
+2024/06/17 16:56:46 Error sending email: mail: no address
+2024/06/17 16:58:17 Error sending email: mail: no address
+2024/06/17 16:59:03 Error sending email: mail: no address
+2024/06/17 17:05:17 Error sending email: mail: no address
+2024/06/17 17:23:10 Application started
+2024/06/17 17:23:10 Loaded .env file successfully
+2024/06/17 17:23:10 goose: no migrations to run. current version: 20230613
+2024/06/17 17:23:10 Database migrations applied successfully
+2024/06/17 17:23:11 Database migrated
+2024/06/17 17:23:11 Connected to RabbitMQ
+2024/06/17 17:23:11 RabbitMQ channel opened
+2024/06/17 17:23:11 Notification service starting at :8081
+2024/06/17 17:24:21 Error sending email: mail: no address
+2024/06/17 17:34:17 Error sending email: mail: no address
+2024/06/17 18:06:09 Application started
+2024/06/17 18:06:09 Loaded .env file successfully
+2024/06/17 18:06:09 goose: no migrations to run. current version: 20230613
+2024/06/17 18:06:09 Database migrations applied successfully
+2024/06/17 18:06:09 Database migrated
+2024/06/17 18:06:09 Connected to RabbitMQ
+2024/06/17 18:06:09 RabbitMQ channel opened
+2024/06/17 18:06:09 Notification service starting at :8081
