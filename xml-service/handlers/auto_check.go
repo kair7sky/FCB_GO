@@ -39,26 +39,42 @@ func AutoCheckHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Store the auto check results in the database
+	// Store the auto check results in the database and collect failures
+	var failures []soap.CheckResult
 	for _, result := range results {
 		autoCheck := models.AutoCheck{
-			URL:    result.URL,
-			Status: result.Status,
-			Result: result.Result,
+			URL:     result.URL,
+			Status:  result.Status,
+			Result:  result.Result,
+			Request: result.Request,
 		}
 		db.DB.Create(&autoCheck)
+		if result.Status == "failure" {
+			failures = append(failures, result)
+		}
 	}
 
-	// Prepare the payload for notification service
+	// If there are failures, send an email notification
+	if len(failures) > 0 {
+		sendFailureNotifications(request.Email, failures)
+	}
+
+	// Check database for changes and send email notifications if any
+	CheckDatabaseForChanges(request.Email)
+
+	// Respond with the results
+	utils.RespondWithJSON(w, http.StatusOK, map[string]interface{}{"results": results})
+}
+
+func sendFailureNotifications(email string, failures []soap.CheckResult) {
 	notificationPayload := map[string]interface{}{
-		"messageTo": request.Email,
-		"content":   generateEmailContent(results),
+		"messageTo": email,
+		"content":   generateEmailContent(failures),
 	}
 
 	payloadBytes, err := json.Marshal(notificationPayload)
 	if err != nil {
 		log.Printf("Error marshaling JSON payload: %v", err)
-		utils.RespondWithError(w, http.StatusInternalServerError, "Failed to prepare notification payload")
 		return
 	}
 
@@ -66,19 +82,13 @@ func AutoCheckHandler(w http.ResponseWriter, r *http.Request) {
 	resp, err := http.Post("http://localhost:8081/send-report", "application/json", bytes.NewBuffer(payloadBytes))
 	if err != nil {
 		log.Printf("Error sending report to notification service: %v", err)
-		utils.RespondWithError(w, http.StatusInternalServerError, "Failed to send report to notification service")
 		return
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
 		log.Printf("Notification service responded with status: %v", resp.Status)
-		utils.RespondWithError(w, http.StatusInternalServerError, "Notification service error")
-		return
 	}
-
-	// Respond with the results
-	utils.RespondWithJSON(w, http.StatusOK, map[string]interface{}{"results": results})
 }
 
 func generateEmailContent(results []soap.CheckResult) string {

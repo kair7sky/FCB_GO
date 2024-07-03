@@ -256,3 +256,69 @@
 2024/06/19 11:01:57 Connected to RabbitMQ
 2024/06/19 11:01:57 RabbitMQ channel opened
 2024/06/19 11:01:57 Notification service starting at :8081
+2024/06/19 11:23:46 Application started
+2024/06/19 11:23:46 Loaded .env file successfully
+2024/06/19 11:23:46 goose: no migrations to run. current version: 20230613
+2024/06/19 11:23:46 Database migrations applied successfully
+2024/06/19 11:23:46 Database migrated
+2024/06/19 11:23:46 Connected to RabbitMQ
+2024/06/19 11:23:46 RabbitMQ channel opened
+2024/06/19 11:23:46 Notification service starting at :8081
+2024/06/21 11:39:06 Application started
+2024/06/21 11:39:06 Loaded .env file successfully
+2024/06/21 11:39:06 goose: no migrations to run. current version: 20230613
+2024/06/21 11:39:06 Database migrations applied successfully
+2024/06/21 11:39:06 Database migrated
+2024/06/21 11:39:06 Connected to RabbitMQ
+2024/06/21 11:39:06 RabbitMQ channel opened
+2024/06/21 11:39:06 Notification service starting at :8081
+2024/06/21 15:36:24 Application started
+2024/06/21 15:36:24 Loaded .env file successfully
+2024/06/21 15:36:24 goose: no migrations to run. current version: 20230613
+2024/06/21 15:36:24 Database migrations applied successfully
+2024/06/21 15:36:25 Database migrated
+2024/06/21 15:36:25 Connected to RabbitMQ
+2024/06/21 15:36:25 RabbitMQ channel opened
+2024/06/21 15:36:25 Notification service starting at :8081
+2024/06/26 11:01:01 Application started
+2024/06/26 11:01:01 Loaded .env file successfully
+2024/06/26 11:01:01 goose: no migrations to run. current version: 20230613
+2024/06/26 11:01:01 Database migrations applied successfully
+2024/06/26 11:01:02 Database migrated
+2024/06/26 11:01:02 Connected to RabbitMQ
+2024/06/26 11:01:02 RabbitMQ channel opened
+2024/06/26 11:01:02 Notification service starting at :8081
+2024/06/26 16:04:12 Application started
+2024/06/26 16:04:13 Loaded .env file successfully
+2024/06/26 16:04:13 goose: no migrations to run. current version: 20230613
+2024/06/26 16:04:13 Database migrations applied successfully
+2024/06/26 16:04:13 Database migrated
+2024/06/26 16:04:13 Connected to RabbitMQ
+2024/06/26 16:04:13 RabbitMQ channel opened
+2024/06/26 16:04:13 Notification service starting at :8081
+2024/06/27 15:31:54 Application started
+2024/06/27 15:31:55 Loaded .env file successfully
+2024/06/27 15:31:55 goose: no migrations to run. current version: 20230613
+2024/06/27 15:31:55 Database migrations applied successfully
+2024/06/27 15:31:55 Database migrated
+2024/06/27 15:31:55 Connected to RabbitMQ
+2024/06/27 15:31:55 RabbitMQ channel opened
+2024/06/27 15:31:55 Notification service starting at :8081
+2024/06/27 16:18:15 Application started
+2024/06/27 16:18:15 Loaded .env file successfully
+2024/06/27 16:18:15 goose: no migrations to run. current version: 20230613
+2024/06/27 16:18:15 Database migrations applied successfully
+2024/06/27 16:18:15 Database migrated
+2024/06/27 16:18:15 Connected to RabbitMQ
+2024/06/27 16:18:15 RabbitMQ channel opened
+2024/06/27 16:18:15 Notification service starting at :8081
+2024/07/04 00:34:14 Application started
+2024/07/04 00:34:16 Loaded .env file successfully
+2024/07/04 00:34:16 goose: no migrations to run. current version: 20230613
+2024/07/04 00:34:16 Database migrations applied successfully
+2024/07/04 00:34:17 Database migrated
+2024/07/04 00:34:17 Connected to RabbitMQ
+2024/07/04 00:34:17 RabbitMQ channel opened
+2024/07/04 00:34:17 Notification service starting at :8081
+2024/07/04 01:00:43 Error sending email: mail: no address
+2024/07/04 01:02:54 Error sending email: mail: no address

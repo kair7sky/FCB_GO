@@ -1,39 +1,42 @@
 package config
 
 import (
-    "log"
-    "os"
-
-    "github.com/joho/godotenv"
+    "github.com/spf13/viper"
 )
 
-// Config holds the database configuration values
 type Config struct {
-    DBHost     string
-    DBPort     string
-    DBUser     string
-    DBPassword string
-    DBName     string
+    DBHost           string
+    DBPort           string
+    DBUser           string
+    DBPassword       string
+    DBName           string
+    RabbitMQURL      string
+    SMTPHost         string
+    SMTPPort         string
+    SMTPUser         string
+    SMTPPassword     string
+    NotificationEmail string // добавляем это поле
 }
 
-// LoadConfig loads the configuration from the .env file and environment variables
 func LoadConfig() (*Config, error) {
-    err := godotenv.Load()
+    viper.SetConfigFile(".env")
+    err := viper.ReadInConfig()
     if err != nil {
-        log.Printf("Error loading .env file: %v", err)
+        return nil, err
     }
 
     config := &Config{
-        DBHost:     os.Getenv("DB_HOST"),
-        DBPort:     os.Getenv("DB_PORT"),
-        DBUser:     os.Getenv("DB_USER"),
-        DBPassword: os.Getenv("DB_PASSWORD"),
-        DBName:     os.Getenv("DB_NAME"),
-    }
-
-    if config.DBHost == "" || config.DBPort == "" || config.DBUser == "" || config.DBPassword == "" || config.DBName == "" {
-        log.Fatalf("Missing required environment variables")
-        return nil, err
+        DBHost:           viper.GetString("DB_HOST"),
+        DBPort:           viper.GetString("DB_PORT"),
+        DBUser:           viper.GetString("DB_USER"),
+        DBPassword:       viper.GetString("DB_PASSWORD"),
+        DBName:           viper.GetString("DB_NAME"),
+        RabbitMQURL:      viper.GetString("RABBITMQ_URL"),
+        SMTPHost:         viper.GetString("SMTP_HOST"),
+        SMTPPort:         viper.GetString("SMTP_PORT"),
+        SMTPUser:         viper.GetString("SMTP_USER"),
+        SMTPPassword:     viper.GetString("SMTP_PASSWORD"),
+        NotificationEmail: viper.GetString("NOTIFICATION_EMAIL"), // инициализируем это поле
     }
 
     return config, nil

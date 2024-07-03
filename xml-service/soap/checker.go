@@ -6,6 +6,7 @@ import (
     "fmt"
     "io/ioutil"
     "net/http"
+  
 )
 
 // SOAPEnvelope and SOAPBody are structs for parsing SOAP responses
@@ -17,13 +18,6 @@ type SOAPEnvelope struct {
 type SOAPBody struct {
     XMLName xml.Name `xml:"Body"`
     Content string   `xml:",innerxml"`
-}
-
-// CheckResult represents the result of a SOAP request check
-type CheckResult struct {
-    URL    string `json:"url"`
-    Status string `json:"status"`
-    Result string `json:"result"`
 }
 
 // SendSOAPRequest sends a SOAP request and returns the response
@@ -49,6 +43,14 @@ func SendSOAPRequest(url string, xmlData string) (string, error) {
     return string(body), nil
 }
 
+// CheckResult represents the result of a single SOAP check
+type CheckResult struct {
+    URL     string `json:"url"`
+    Status  string `json:"status"`
+    Result  string `json:"result"`
+    Request string `json:"request"`
+}
+
 // CheckSOAPRequests sends SOAP requests and checks the responses
 func CheckSOAPRequests(url string, requests []string) ([]CheckResult, error) {
     var results []CheckResult
@@ -63,9 +65,10 @@ func CheckSOAPRequests(url string, requests []string) ([]CheckResult, error) {
         }
 
         checkResult := CheckResult{
-            URL:    url,
-            Status: status,
-            Result: result,
+            URL:     url,
+            Status:  status,
+            Result:  result,
+            Request: request,
         }
 
         results = append(results, checkResult)
